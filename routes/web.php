@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,7 +30,7 @@ Route::middleware('auth')->group(function () {
 
 
     // sliders
-    
+    Route::resource('slider', SliderController::class);
 });
 
 require __DIR__.'/auth.php';
