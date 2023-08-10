@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class SliderController extends Controller
 {
@@ -12,7 +13,7 @@ class SliderController extends Controller
      */
     public function index()
     {
-        //
+        return view('slider.index',['sliders'=>Slider::get()]);
     }
 
     /**
@@ -28,7 +29,15 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $slider=Slider::create($request->all());
+        
+        if($request->fondo){
+            $path = $request->fondo->storeAs('public/slider', $slider->id.'.'.$request->fondo->extension());
+            $slider->fondo=$path;
+            $slider->save();
+        }
+        
+        return redirect()->route('slider.index');
     }
 
     /**
@@ -52,7 +61,13 @@ class SliderController extends Controller
      */
     public function update(Request $request, Slider $slider)
     {
-        //
+        if($slider->vista==='SI'){
+            $slider->vista='NO';
+        }else{
+            $slider->vista='SI';
+        }
+        $slider->save();
+        return redirect()->route('slider.index');
     }
 
     /**
@@ -60,6 +75,10 @@ class SliderController extends Controller
      */
     public function destroy(Slider $slider)
     {
-        //
+        $slider->delete();
+        if(Storage::exists($slider->fondo)){
+            Storage::delete($slider->fondo);
+        }
+        return redirect()->route('slider.index');
     }
 }

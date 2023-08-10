@@ -2,150 +2,16 @@
 
 @section('content')
 
-@include('sections.slider')
+{{-- slider --}}
+@include('sections.slider',['sliders'=>\App\Models\Slider::where('vista','SI')->latest()->get()])
 
-<!--Department One Start-->
-<section class="department-one">
-    <div class="department-one__bg"
-        style="background-image: url(assets/images/backgrounds/department-one-bg.png);"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="department-one__inner">
-                    <ul class="department-one__list list-unstyled">
-                        <li class="department-one__single">
-                            <div class="department-one__content">
-                                <h3 class="department-one__title"><a href="department-details.html">Your
-                                        <br> Government</a></h3>
-                                <div class="department-one__icon">
-                                    <span class="icon-parthenon"></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="department-one__single">
-                            <div class="department-one__content">
-                                <h3 class="department-one__title"><a href="department-details.html">Jobs &
-                                        <br> Unemployment</a></h3>
-                                <div class="department-one__icon">
-                                    <span class="icon-suitcase"></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="department-one__single">
-                            <div class="department-one__content">
-                                <h3 class="department-one__title"><a href="department-details.html">Business
-                                        <br> & Industrials</a></h3>
-                                <div class="department-one__icon">
-                                    <span class="icon-industry"></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="department-one__single">
-                            <div class="department-one__content">
-                                <h3 class="department-one__title"><a href="department-details.html">Roads &
-                                        <br> Transportation</a></h3>
-                                <div class="department-one__icon">
-                                    <span class="icon-bus"></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="department-one__single">
-                            <div class="department-one__content">
-                                <h3 class="department-one__title"><a href="department-details.html">Culture &
-                                        <br> Recreations</a></h3>
-                                <div class="department-one__icon">
-                                    <span class="icon-lotus"></span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <p class="department-one__text">Get our quick services from the municipal. <a href="">View
-                            all services</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--Department One End-->
 
-<!--About One Start-->
-<section class="about-one">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-6">
-                <div class="about-one__left">
-                    <div class="about-one__shape-1 float-bob-x">
-                        <img src="assets/images/shapes/about-one-shape-1.png" alt="">
-                    </div>
-                    <div class="about-one__shape-3 float-bob-y">
-                        <img src="assets/images/shapes/about-one-shape-3.png" alt="">
-                    </div>
-                    <div class="about-one__img-box">
-                        <div class="about-one__img">
-                            <img src="assets/images/resources/about-one-img-1.jpg" alt="">
-                        </div>
-                        <div class="about-one__img-2">
-                            <img src="assets/images/resources/about-one-img-2.jpg" alt="">
-                        </div>
-                        <div class="about-one__shape-2">
-                            <img src="assets/images/shapes/about-one-shape-2.png" alt="">
-                        </div>
-                        <div class="about-one__video-link">
-                            <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
-                                <div class="about-one__video-icon">
-                                    <span class="fa fa-play"></span>
-                                    <i class="ripple"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="about-one__call-box">
-                            <div class="about-one__call-icon">
-                                <span class="icon-government-1"></span>
-                            </div>
-                            <div class="about-one__call-box-content">
-                                <p class="about-one__call-text">Mayor Office</p>
-                                <h4 class="about-one__call-number"><a href="tel:9212340800">+92 (1234) 0800</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6">
-                <div class="about-one__right">
-                    <div class="section-title text-left">
-                        <div class="section-title__icon">
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <span class="section-title__tagline">Welcome to govity</span>
-                        <h2 class="section-title__title">Meet Ideological leader
-                            for youth generation</h2>
-                    </div>
-                    <p class="about-one__text">There are many variations of passages of available but the
-                        majority have suffered alteration in some form, by injected hum randomised words which
-                        don't slightly.</p>
-                    <div class="about-one__icon-and-big-text">
-                        <div class="about-one__icon">
-                            <span class="icon-cityscape"></span>
-                        </div>
-                        <p class="about-one__big-text">Great city & place to develop your career &
-                            business.</p>
-                    </div>
-                    <p class="about-one__text-2">There are many variations of passages of available but the
-                        majority have suffered alteration in some form.</p>
-                    <div class="about-one__btn-box-and-signature">
-                        <a href="about.html" class="about-one__btn thm-btn">Discover More</a>
-                        <div class="about-one__signature">
-                            <img src="assets/images/resources/about-one-signeture.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--About One End-->
+{{-- departamento --}}
+@include('sections.departament')
+
+
+{{-- autoridad --}}
+@include('sections.autoridad',['autoridad'=>\App\Models\Autoridad::first()])
 
 <!--Feature One Start-->
 <section class="feature-one">
@@ -268,11 +134,11 @@
             <div class="col-xl-4">
                 <div class="services-one__left">
                     <div class="services-one__shape-2 img-bounce">
-                        <img src="assets/images/shapes/services-one-shape-2.png" alt="">
+                        <img src="{{ asset('assets/images/shapes/services-one-shape-2.png') }}" alt="">
                     </div>
                     <div class="services-one__img-box">
                         <div class="services-one__img">
-                            <img src="assets/images/resources/services-one-img-1.png" alt="">
+                            <img src="{{ asset('assets/images/resources/services-one-img-1.png') }}" alt="">
                             <div class="services-one__img-shadow"></div>
                         </div>
                     </div>
@@ -281,65 +147,77 @@
             <div class="col-xl-8">
                 <div class="services-one__right">
                     <div class="services-one__shape-1 float-bob-x">
-                        <img src="assets/images/shapes/services-one-shape-1.png" alt="">
+                        <img src="{{ asset('assets/images/shapes/services-one-shape-1.png') }}" alt="">
                     </div>
                     <div class="services-one__shape-3 float-bob-x">
-                        <img src="assets/images/shapes/services-one-shape-3.png" alt="">
+                        <img src="{{ asset('assets/images/shapes/services-one-shape-3.png') }}" alt="">
                     </div>
                     <div class="services-one__points-title-box">
-                        <p>Explore online services & resource</p>
+                        <p>Trámites Balcón de Servicios y Recursos en línea</p>
                     </div>
                     <div class="services-one__points-box">
                         <ul class="services-one__points-list list-unstyled">
                             <li>
-                                <a href="parking-permission.html">Parking Permission<span
-                                        class="fa fa-angle-right"></span></a>
+                                <a href="parking-permission.html">Parking Permission
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="tax-return.html">File a Tax Return<span
-                                        class="fa fa-angle-right"></span></a>
+                                <a href="tax-return.html">File a Tax Return
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="birth-certificate.html">Order Birth Certificate<span
-                                        class="fa fa-angle-right"></span></a>
+                                <a href="birth-certificate.html">Order Birth Certificate
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="building-permission.html">Get Building Permission<span
-                                        class="fa fa-angle-right"></span></a>
+                                <a href="building-permission.html">Get Building Permission
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="driving-license.html">Apply for Driving License<span
-                                        class="fa fa-angle-right"></span></a>
+                                <a href="driving-license.html">Apply for Driving License
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="report-polution.html">Report Polution<span
-                                        class="fa fa-angle-right"></span></a>
+                                <a href="report-polution.html">Report Polution
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
                             </li>
                         </ul>
                         <ul class="services-one__points-list list-unstyled">
                             <li>
-                                <a href="report-polution.html">Public Service Identity<span
-                                        class="fa fa-angle-right"></span></a>
+                                <a href="report-polution.html">Public Service Identity
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="birth-certificate.html">Apply for a City Job<span
-                                        class="fa fa-angle-right"></span></a>
+                                <a href="birth-certificate.html">Apply for a City Job
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="driving-license.html">Professional Licenses<span
-                                        class="fa fa-angle-right"></span></a>
+                                <a href="driving-license.html">Professional Licenses
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="building-permission.html">National Planning Framework<span
-                                        class="fa fa-angle-right"></span></a>
+                                <a href="building-permission.html">National Planning Framework
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="driving-license.html">Apply for Business License<span
-                                        class="fa fa-angle-right"></span></a>
+                                <a href="driving-license.html">Apply for Business License
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href="parking-permission.html">Online Court Services<span
-                                        class="fa fa-angle-right"></span></a>
+                                <a href="parking-permission.html">Online Court Services
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
                             </li>
                         </ul>
                     </div>

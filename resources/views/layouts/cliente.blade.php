@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
@@ -191,7 +191,7 @@
                                     <li><a href="team.html">Our Team</a></li>
                                     <li><a href="events.html">Upcoming Events</a></li>
                                     <li><a href="news.html">Latest News</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{{ route('dashboard') }}">Ingresar</a></li>
                                 </ul>
                             </div>
                         </div>

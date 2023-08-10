@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Autoridad;
 use App\Http\Controllers\Controller;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller

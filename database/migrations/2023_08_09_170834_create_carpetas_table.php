@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('autoridads', function (Blueprint $table) {
+        Schema::create('carpetas', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('nombre');
+            $table->enum('vista',['SI','NO'])->default('SI');
+            $table->foreignId('carpeta_id')->nullable()->constrained(
+                table: 'carpetas'
+            );
         });
     }
 
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('autoridads');
+        Schema::dropIfExists('carpetas');
     }
 };

@@ -3,7 +3,7 @@
         <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
         <ul class="main-menu__list">
             <li>
-                <a href="index.html">Inicio</a>
+                <a href="{{ url('/') }}" class="{{ Route::is('welcome')?'current':'' }}">Inicio</a>
             </li>
             <li class="dropdown">
                 <a href="#">Parroquia</a>
@@ -17,51 +17,37 @@
                    
                 </ul>
             </li>
-            <li class="dropdown">
-                <a href="#">Tranparencia</a>
+            
+            <li class="dropdown ">
+                <a href="#!">Servicios</a>
                 <ul class="sub-menu">
-                    <li><a href="our-services.html">Services</a></li>
-                    <li><a href="building-permission.html">Building permission</a></li>
-                    <li><a href="driving-license.html">Driving license</a></li>
-                    <li><a href="report-polution.html">Report polution</a></li>
-                    <li><a href="parking-permission.html">Parking permission</a></li>
-                    <li><a href="tax-return.html">Tax return</a></li>
-                    <li><a href="birth-certificate.html">Birth certificate</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Departments</a>
-                <ul class="sub-menu">
-                    <li><a href="departments.html">Departments</a></li>
-                    <li><a href="department-details.html">Department details</a></li>
+                    <li ><a href="{{ route('tramites') }}" class="{{ Route::is('tramites')?'current':'' }}">Tramites</a></li>
+                    <li><a href="{{ route('quejasSugerencias') }}" class="{{ Route::is('quejasSugerencias*')?'current':'' }}">Quejas y sujerencias</a></li>
                 </ul>
             </li>
 
             <li class="dropdown">
-                <a href="#">News</a>
+                <a href="#!" class="{{ Route::is('transparencia*')?'current':'' }}">Transparencia</a>
                 <ul class="sub-menu">
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="news-sidebar.html">News sidebar</a></li>
-                    <li><a href="news-details.html">News details</a></li>
+                    @foreach (App\Models\Carpeta::where('nombre','TRANPARENCIA')->first()->carpetas as $tra)
+                        <li><a href="{{ route('transparencia',$tra->id) }}">{{ $tra->nombre }}</a></li>
+                    @endforeach
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#">Shop</a>
+                <a href="#" class="{{ Route::is('rendicionCuentas*')?'current':'' }}">Rendición de cuenta</a>
                 <ul class="sub-menu">
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="shop-details.html">Shop details</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>
+                    @foreach (App\Models\Carpeta::where('nombre','RENDICIÓN DE CUENTAS')->first()->carpetas as $rc)
+                        <li><a href="{{ route('rendicionCuentas',$rc->id) }}">{{ $rc->nombre }}</a></li>
+                    @endforeach
                 </ul>
             </li>
             <li>
-                <a href="contact.html">Contact</a>
+                <a href="{{ route('noticias') }}" class="{{ Route::is('noticias*')?'current':'' }}">Noticias</a>
+            </li>
+            <li>
+                <a href="{{ route('noticias') }}" class="{{ Route::is('noticias*')?'current':'' }}">Contacto</a>
             </li>
         </ul>
-    </div>
-    <div class="main-menu__right">
-        <div class="main-menu__btn-box">
-            <a href="contact.html" class="thm-btn main-menu__btn">Report Issue</a>
-        </div>
     </div>
 </div>
