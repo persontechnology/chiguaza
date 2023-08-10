@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,10 +10,10 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
 
-    
+
 
     <!-- Bootstrap core CSS -->
-<link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -34,6 +34,13 @@
     
     <!-- Custom styles for this template -->
     <link href="{{ asset('admin/dashboard.css') }}" rel="stylesheet">
+
+    {{-- file --}}
+    <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
+
   </head>
   <body>
     
@@ -56,79 +63,54 @@
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link {{ Route::is('dashboard')?'active':'' }}" aria-current="page" href="{{ route('dashboard') }}">
               <span data-feather="home"></span>
               Inicio
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('slider.index') }}">
+            <a class="nav-link {{ Route::is('admin.quejasSugerencias*')?'active':'' }}" href="{{ route('admin.quejasSugerencias') }}">
+              <span data-feather="layers"></span>
+              Noticias
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link {{ Route::is('slider*')?'active':'' }}" href="{{ route('slider.index') }}">
               <span data-feather="file"></span>
               Slider
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link {{ Route::is('autoridad*')?'active':'' }}" href="{{ route('autoridad.index') }}">
               <span data-feather="shopping-cart"></span>
-              Products
+              Autoridad
             </a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              Customers
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link {{ Route::is('carpetas*')?'active':'' }}" href="{{ route('carpetas.index') }}">
               <span data-feather="bar-chart-2"></span>
-              Reports
+              Carpetas
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link {{ Route::is('admin.quejasSugerencias*')?'active':'' }}" href="{{ route('admin.quejasSugerencias') }}">
               <span data-feather="layers"></span>
-              Integrations
+              Quejas y Sugerencias
             </a>
           </li>
+          
         </ul>
 
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>Saved reports</span>
-          <a class="link-secondary" href="#" aria-label="Add a new report">
-            <span data-feather="plus-circle"></span>
-          </a>
-        </h6>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Current month
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Last quarter
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Social engagement
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Year-end sale
-            </a>
-          </li>
-        </ul>
+        
       </div>
     </nav>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+      @include('layouts.alert')
+
       @yield('content')
     </main>
   </div>
@@ -136,5 +118,10 @@
 
 
     <script src="{{ asset('admin/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/fileinput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/locales/es.js"></script>
+    
+
+
   </body>
 </html>

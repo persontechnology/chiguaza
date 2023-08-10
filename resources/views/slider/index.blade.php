@@ -13,11 +13,11 @@
                         @csrf
                       
                         <div class="form-group">
-                            <label for="titulo_1"><b>Título 1</b></label>
+                            <label for="titulo_1"><b>Título</b></label>
                             <input type="text" name="titulo_1" value="{{ old('titulo_1') }}" class="form-control" id="titulo_1">
                         </div>
                         <div class="form-group">
-                            <label for="titulo_2"><b>Título 2</b></label>
+                            <label for="titulo_2"><b>Sub Título</b></label>
                             <input type="text" name="titulo_2" value="{{ old('titulo_2') }}" class="form-control" id="titulo_2">
                         </div>
                         <div class="form-group">
@@ -33,7 +33,7 @@
                         <div class="form-group">
                             <label for="fondo"><b>Imagen de fondo</b></label>
                             <input type="file" name="fondo" class="form-control-file" id="fondo">
-                            <i>Formato: Anchura=1920,Altura=870|.png .jpg .jpeg</i>
+                            <i>Formato: Anchura=1894,Altura=731|.png .jpg .jpeg</i>
                         </div>
                         
                         <button type="submit" class="btn btn-success">Guardar</button>
@@ -47,8 +47,9 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th scope="col">Título 1</th>
-                            <th scope="col">Título 2</th>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Título</th>
+                            <th scope="col">Sub Título</th>
                             <th scope="col">Descripción</th>
                             <th scope="col">Url explorar más</th>
                             <th scope="col">Vista</th>
@@ -58,7 +59,11 @@
                     <tbody>
                         @foreach ($sliders as $sl)
                         <tr class="">
-                            
+                            <td>
+                                <a href="{{ Storage::url($sl->fondo) }}">
+                                    <img src="{{ Storage::url($sl->fondo) }}" alt="" width="45px">
+                                </a>
+                            </td>
                             <td>{{ $sl->titulo_1 }}</td>
                             <td>{{ $sl->titulo_2 }}</td>
                             <td>{{ $sl->descripcion }}</td>
