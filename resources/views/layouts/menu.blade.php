@@ -6,19 +6,15 @@
                 <a href="index.html">Inicio</a>
             </li>
             <li class="dropdown">
-                <a href="#">Municipal</a>
+                <a href="#">Parroquia</a>
                 <ul class="sub-menu">
-                    <li><a href="about.html">Misión y Visión</a></li>
-                    <li><a href="our-history.html">Chiguaza</a></li>
-                    <li><a href="team.html">Presidente</a></li>
-                    <li><a href="team-details.html">Team details</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="portfolio-details.html">Portfolio details</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="event-details.html">Event details</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                    <li><a href="404.html">404 error</a></li>
+                    <li><a href="{{ route('resenahistorica') }}">Reseña Histórica</a></li>
+                    <li><a href="{{ route('misionvision') }}">Misión y Visión</a></li>
+                    
+                    <li><a href="{{ route('autoridades') }}">Autoridades</a></li>
+                    <li><a href="{{ route('organigrama') }}">Organigrama</a></li>
+                    <li><a href="{{ route('turismo') }}">Turismo</a></li>
+                   
                 </ul>
             </li>
             <li class="dropdown">

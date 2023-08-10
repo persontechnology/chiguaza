@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Session;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,9 +30,15 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    
 
     // sliders
-    
 });
 
 require __DIR__.'/auth.php';
+Route::get('/resena-historica', [WelcomeController::class,'resenahistorica'])->name('resenahistorica');
+Route::get('/mision-y-vision', [WelcomeController::class,'misionvision'])->name('misionvision');
+Route::get('/himno', [WelcomeController::class,'himno'])->name('himno');
+Route::get('/autoridades', [WelcomeController::class,'autoridades'])->name('autoridades');
+Route::get('/organigrama', [WelcomeController::class,'organigrama'])->name('organigrama');
+Route::get('/turismo', [WelcomeController::class,'turismo'])->name('turismo');

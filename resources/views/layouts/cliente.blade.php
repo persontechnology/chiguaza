@@ -281,7 +281,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© Copyright 2023 by <a href="#">Govity Template</a>
+                                <p class="site-footer__bottom-text">Copy© 2023 Taisha Technology. Todos derechos reservados.<a href="https://www.facebook.com/DKFLSGDSFGDSFGDSFGFDS"></a>
                                 </p>
                             </div>
                         </div>
