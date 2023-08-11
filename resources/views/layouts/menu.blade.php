@@ -46,7 +46,7 @@
                 <a href="{{ route('noticias') }}" class="{{ Route::is('noticias*')?'current':'' }}">Noticias</a>
             </li>
             <li>
-                <a href="{{ route('noticias') }}" class="{{ Route::is('noticias*')?'current':'' }}">Contacto</a>
+                <a href="{{ route('contactos') }}" class="{{ Route::is('contactos*')?'current':'' }}">Contacto</a>
             </li>
         </ul>
     </div>

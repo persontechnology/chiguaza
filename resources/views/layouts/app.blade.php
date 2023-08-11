@@ -69,7 +69,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ Route::is('admin.quejasSugerencias*')?'active':'' }}" href="{{ route('admin.quejasSugerencias') }}">
+            <a class="nav-link {{ Route::is('noticias-admin*')?'active':'' }}" href="{{ route('noticias-admin.index') }}">
               <span data-feather="layers"></span>
               Noticias
             </a>
@@ -79,6 +79,12 @@
             <a class="nav-link {{ Route::is('slider*')?'active':'' }}" href="{{ route('slider.index') }}">
               <span data-feather="file"></span>
               Slider
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ Route::is('empresa*')?'active':'' }}" href="{{ route('empresa.index') }}">
+              <span data-feather="shopping-cart"></span>
+              Empresa
             </a>
           </li>
           <li class="nav-item">

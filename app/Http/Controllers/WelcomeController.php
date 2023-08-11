@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Autoridad;
 use App\Http\Controllers\Controller;
+use App\Models\Archivo;
+use App\Models\Noticia;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -18,9 +20,14 @@ class WelcomeController extends Controller
         // Artisan::call('migrate:fresh --seed');
         
         $slider=Slider::where('vista','SI')->latest()->take(5)->get();
+
+        $arhivos=Archivo::latest()->take(15)->get();
+        $noticias=Noticia::latest()->take(3)->get();
         $data = array(
             'sliders'=>$slider,
             'autoridad'=>Autoridad::first(),
+            'archivos'=>$arhivos,
+            'noticias'=>$noticias
             
         );
         return view('welcome',$data);

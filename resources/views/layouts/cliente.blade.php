@@ -64,21 +64,33 @@
 
 
     <div class="page-wrapper">
+        @php
+            $empresah=\App\Models\Empresa::first();
+        @endphp
         <header class="main-header">
             <nav class="main-menu">
                 <div class="main-menu__wrapper">
                     <div class="main-menu__wrapper-inner">
                         <div class="main-menu__logo">
-                            <a href="index.html"><img src="{{ asset('assets/images/resources/logo-1.png') }}" alt=""></a>
+                            <a href="{{ url('/') }}"><img src="{{ Storage::url($empresah->logo) }}" alt=""></a>
                         </div>
                         <div class="main-menu__top">
                             <div class="main-menu__top-inner">
                                 <div class="main-menu__top-left">
                                     <div class="main-menu__social">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-facebook"></i></a>
-                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        @if ($empresah->facebook)
+                                        <a href="{{ $empresah->facebook }}" target="_blanck"><i class="fab fa-facebook"></i></a>    
+                                        @endif
+                                        @if ($empresah->twitter)
+                                            <a href="{{ $empresah->twitter }}" target="_blanck"><i class="fab fa-twitter"></i></a>    
+                                        @endif
+                                        @if ($empresah->instagram)
+                                            <a href="{{ $empresah->instagram }}" target="_blanck"><i class="fab fa-instagram"></i></a>    
+                                        @endif
+                                        @if ($empresah->youtube)
+                                            <a href="{{ $empresah->youtube }}" target="_blanck"><i class="fab fa-youtube"></i></a>    
+                                        @endif
+                                        
                                     </div>
                                 </div>
                                 <div class="main-menu__top-right">
@@ -88,22 +100,20 @@
                                                 <i class="fas fa-envelope"></i>
                                             </div>
                                             <div class="text">
-                                                <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                                <p><a href="mailto:needhelp@company.com">{{ $empresah->email }}</a></p>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="icon">
-                                                <i class="fas fa-clock"></i>
+                                                <i class="fas fa-phone"></i>
                                             </div>
                                             <div class="text">
-                                                <p>Open hours: Mon - Fri 8.00 am - 6.00 pm</p>
+                                                <p>{{ $empresah->telefono }}</p>
                                             </div>
                                         </li>
                                     </ul>
                                     <ul class="list-unstyled main-menu__top-menu">
-                                        <li><a href="about.html">Consejo</a></li>
-                                        <li><a href="about.html">Govierno</a></li>
-                                        <li><a href="contact.html">Quejas</a></li>
+                                        <li><a href="about.html">Ingresar</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -121,6 +131,7 @@
         </div><!-- /.stricky-header -->
 
         {{-- contenido --}}
+        @include('layouts.alert')
         @yield('content')
 
         <!--Site Footer Start-->

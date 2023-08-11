@@ -3,7 +3,9 @@
 use App\Http\Controllers\AutoridadController;
 use App\Http\Controllers\CarpetaController;
 use App\Http\Controllers\DocumentoController;
+use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\EstaticasController;
+use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuejasSugerenciasController;
 use App\Http\Controllers\SliderController;
@@ -25,9 +27,7 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/', [WelcomeController::class,'index'])->name('welcome');
 
 Route::get('/resena-historica', [WelcomeController::class,'resenahistorica'])->name('resenahistorica');
 Route::get('/mision-y-vision', [WelcomeController::class,'misionvision'])->name('misionvision');
@@ -46,7 +46,9 @@ Route::get('/quejas-y-sugerencias/ingresar',[EstaticasController::class,'quejasS
 Route::get('/quejas-y-sugerencias/consultar',[EstaticasController::class,'quejasSugerenciasConsultar'])->name('quejasSugerenciasConsultar');
 Route::post('/enviar-queja-sugerencia',[EstaticasController::class,'enviarQuejaSugerencia'])->name('enviarQuejaSugerencia');
 Route::get('/noticias',[EstaticasController::class,'noticias'])->name('noticias');
-
+Route::get('/detalle-de-noticia/{id}',[EstaticasController::class,'noticiasDetalle'])->name('noticiasDetalle');
+Route::get('/contactos',[EstaticasController::class,'contactos'])->name('contactos');
+Route::post('/contactos-enviar',[EstaticasController::class,'contactoEnviar'])->name('contactoEnviar');
 
 
 
@@ -65,12 +67,17 @@ Route::middleware('auth')->group(function () {
     // sliders
     Route::resource('slider', SliderController::class);
     Route::resource('autoridad', AutoridadController::class);
+    Route::resource('noticias-admin', NoticiaController::class);
+    Route::resource('empresa', EmpresaController::class);
     
     Route::resource('carpetas', CarpetaController::class);
     Route::post('guardarArchivo', [CarpetaController::class,'guardarArchivo'])->name('guardarArchivo');
     Route::get('eliminarArchivo/{id}', [CarpetaController::class,'eliminarArchivo'])->name('eliminarArchivo');
     Route::get('admin-quejas-sugerencias', [QuejasSugerenciasController::class,'index'])->name('admin.quejasSugerencias');
     Route::get('admin-quejas-sugerencias/ver/{id}', [QuejasSugerenciasController::class,'ver'])->name('admin.quejasSugerenciasVer');
+
+    
+
 
 });
 

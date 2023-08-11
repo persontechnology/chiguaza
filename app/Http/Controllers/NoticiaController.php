@@ -11,7 +11,7 @@ class NoticiaController extends Controller
 {
     public function index()
     {
-        return view('noticia-admin.index',['noticias'=>Noticia::get()]);
+        return view('noticia-admin.index',['noticias'=>Noticia::latest()->paginate(10)]);
     }
 
     /**
@@ -35,8 +35,8 @@ class NoticiaController extends Controller
         
         $no->save();
 
-        if($request->fondo){
-            $path = $request->fondo->storeAs('public/noticias', $no->id.'.'.$request->fondo->extension());
+        if($request->foto){
+            $path = $request->foto->storeAs('public/noticias', $no->id.'.'.$request->foto->extension());
             $no->foto=$path;
             $no->save();
         }
@@ -69,14 +69,14 @@ class NoticiaController extends Controller
 
         $no->titulo=$request->titulo_1;
         $no->detalle=$request->detalle;
-        $no->foto=$request->foto;
+        
         $no->user_id=Auth::id();
         $no->vista=$request->vista;
         
         $no->save();
 
         if($request->foto){
-            if(Storage::exists($no->foto)){
+            if(Storage::exists($no->foto??'oko.pngx')){
                 Storage::delete($no->foto);
             }
             $path = $request->foto->storeAs('public/noticias', $no->id.'.'.$request->foto->extension());

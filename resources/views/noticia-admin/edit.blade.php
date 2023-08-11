@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    Slider
+                    Editar Noticia <a href="{{ route('noticias-admin.index') }}">Atras</a>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('noticias-admin.update',$noticia) }}" method="POST" enctype="multipart/form-data">
@@ -22,19 +22,16 @@
                             <textarea class="form-control" id="detalle" name="detalle">{!! html_entity_decode($noticia->detalle) !!}</textarea>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="categoria">Selecione categoría</label>
-                            <select class="form-control" name="categoria" id="categoria" required>
-                              @foreach ($categorias as $cat)
-                              <option value="{{ $cat->id }}">{{ $cat->nombre }}</option>
-                              @endforeach
-                            </select>
-                        </div>
+                       
                         
                         <div class="form-group">
                             <label for="foto">Foto</label>
                             <input type="file" name="foto" class="form-control-file" id="foto">
                             <i>Formato: Anchura=350,Altura=250|.png .jpg .jpeg</i>
+                            <br>
+                            <a href="{{ Storage::url($noticia->foto) }}">
+                                <img src="{{ Storage::url($noticia->foto) }}" alt="" width="45px">
+                            </a>
                         </div>
                         
                         <div class="form-group">

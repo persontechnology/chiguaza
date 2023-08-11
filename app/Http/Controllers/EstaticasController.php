@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use App\Mail\EnviarListadoQuejasSugerencias;
 use App\Models\Archivo;
 use App\Models\Carpeta;
+use App\Models\Empresa;
+use App\Models\Noticia;
 use App\Models\QuejaSugerencia;
 use App\Models\User;
+use App\Notifications\EnviarContacto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
@@ -81,6 +84,32 @@ class EstaticasController extends Controller
     }
 
     public function noticias() {
-        return view('estaticas.noticias');
+        $data = array(
+            'noticias'=>Noticia::where('vista','SI')->latest()->paginate(6)
+        );
+        return view('estaticas.noticias',$data);
+    }
+
+    public function noticiasDetalle($id)  {
+        $not=Noticia::where(['id'=>$id,'vista'=>'SI'])->firstOrFail();
+        $data = array(
+            'noticia'=>$not
+        );
+        return view('estaticas.noticiasDetalle',$data);
+    }
+
+    public function contactos() {
+        $data = array(
+            'empresa'=>Empresa::first()
+        );
+        return view('estaticas.contactos',$data);
+    }
+    public function contactoEnviar(Request $request) {
+        
+        $user=new User();
+        $user->email='david.criollo14@gmail.com';
+        $user->notify(new EnviarContacto($request));
+        Session::flash('success','Gracias por contactar con GAD Chiguaza. Nos comunicaremos con usted a la brevedad posible.');
+        return redirect()->route('contactos');
     }
 }

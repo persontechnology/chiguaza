@@ -8,7 +8,7 @@
                     <ul class="department-one__list list-unstyled">
                         <li class="department-one__single">
                             <div class="department-one__content">
-                                <h3 class="department-one__title"><a href="department-details.html">GAD <br>CHIGUAZA</a></h3>
+                                <h3 class="department-one__title"><a href="{{ route('resenahistorica') }}">GAD <br>CHIGUAZA</a></h3>
                                 <div class="department-one__icon">
                                     <span class="icon-parthenon"></span>
                                 </div>
@@ -16,14 +16,14 @@
                         </li>
                         <li class="department-one__single">
                             <div class="department-one__content">
-                                <h3 class="department-one__title"><a href="department-details.html">REQUISITOS
+                                <h3 class="department-one__title"><a href="{{ route('tramites') }}">REQUISITOS
                                         <br>& TRAMITES</a></h3>
                                 <div class="department-one__icon">
                                     <span class="icon-suitcase"></span>
                                 </div>
                             </div>
                         </li>
-                        <li class="department-one__single">
+                        {{-- <li class="department-one__single">
                             <div class="department-one__content">
                                 <h3 class="department-one__title"><a href="department-details.html">TURNOS
                                         <br> PRESENCIALES</a></h3>
@@ -31,10 +31,10 @@
                                     <span class="icon-industry"></span>
                                 </div>
                             </div>
-                        </li>
+                        </li> --}}
                         <li class="department-one__single">
                             <div class="department-one__content">
-                                <h3 class="department-one__title"><a href="department-details.html">ATRACTIVOS
+                                <h3 class="department-one__title"><a href="{{ route('turismo') }}">ATRACTIVOS
                                         <br> TURÍSTICOS</a></h3>
                                 <div class="department-one__icon">
                                     <span class="icon-bus"></span>
@@ -43,7 +43,7 @@
                         </li>
                         <li class="department-one__single">
                             <div class="department-one__content">
-                                <h3 class="department-one__title"><a href="department-details.html">QUEJAS
+                                <h3 class="department-one__title"><a href="{{ route('quejasSugerencias') }}">QUEJAS
                                         <br>& SUGERENCIAS</a></h3>
                                 <div class="department-one__icon">
                                     <span class="icon-lotus"></span>
