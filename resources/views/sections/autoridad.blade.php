@@ -86,7 +86,7 @@
                                     <span class="fa fa-arrow-right"></span>
                                 </div>
                                 <div class="title">
-                                    <h3>{{ $autoridad->logro_3 }}</h3>
+                                    <h3>{{ $autoridad->logro_2 }}</h3>
                                 </div>
                             </div>
                         </li>
