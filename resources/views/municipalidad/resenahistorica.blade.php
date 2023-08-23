@@ -19,9 +19,9 @@
             <div class="container">
                 <div class="main-slider__content">
                     <p class="main-slider__sub-title">Administración 2023-2027.</p>
-                    <h2 class="main-slider__title">RESEÑA HISTORICA</h2>
+                    <h2 class="main-slider__title"class="main-slider__title" style="font-size: 40px;">RESEÑA HISTORICA</h2>
                     <div class="main-slider__btn-box">
-                        <a href="about.html" class="main-slider__btn thm-btn">Inicio</a>
+                        <a href="{{ url('/') }}" class="main-slider-two__btn thm-btn{{ Route::is('welcome')?'current':'' }}">Inicio</a>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
     <div class="history-one__bottom">
         <div class="history-one__wrap">
             <div class="history-one__shape-1">
-                <img src="assets/images/shapes/history-one-shape-1.png" alt="">
+                <img src="assets/images/autoridades/logo1.png" alt="">
             </div>
             <div class="container">
                 <div class="history-one__inner">
@@ -140,7 +140,7 @@
                                                 <div class="col-xl-6 col-lg-6">
                                                     <div class="history-one__content-right">
                                                         <div class="history-one__content-img">
-                                                            <img src="assets/images/mapa/mapa.jpg"
+                                                            <img src="assets/images/autoridades1/presidente.jpg"
                                                                 alt="">
                                                         </div>
                                                     </div>
@@ -212,8 +212,9 @@
                                                 <div class="col-xl-6 col-lg-6">
                                                     <div class="history-one__content-right">
                                                         <div class="history-one__content-img">
-                                                            <img src="assets/images/mapa/mapa.jpg"
-                                                                alt="">
+                                                            
+                                                            <img src="assets/images/turismo/cascada.jpg" 
+                                                            alt="">
                                                         </div>
                                                     </div>
                                                 </div>

@@ -35,9 +35,9 @@
             <div class="container">
                 <div class="main-slider__content">
                     <p class="main-slider__sub-title">{{ $item->titulo_2 }}</p>
-                    <h2 class="main-slider__title">{{ $item->titulo_1 }}</h2>
+                    <h4 class="main-slider__title" style="font-size: 30px;">{{ $item->titulo_1 }}</h4>
                     <div class="main-slider__btn-box">
-                        <a href="{{ $item->url_explorar_mas }}" class="main-slider__btn thm-btn">Descubrir más</a>
+                        <a target="_blank" href="{{ $item->url_explorar_mas }}" class="main-slider__btn thm-btn">Descubrir más</a>
                     </div>
                 </div>
             </div>

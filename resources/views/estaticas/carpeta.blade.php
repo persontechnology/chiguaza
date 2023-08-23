@@ -5,7 +5,7 @@
         
         <div class="row d-flex align-items-start">
             <div class="col-md-4">
-                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <div class="Success nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     @php
                         $i=0;
                     @endphp

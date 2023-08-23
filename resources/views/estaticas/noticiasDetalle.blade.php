@@ -2,7 +2,7 @@
 @section('content')
      <!--Page Header Start-->
      <section class="page-header">
-        <div class="page-header-bg" style="background-image: url({{ asset('assets/images/backgrounds/page-header-bg.jpg') }})">
+        <div class="page-header-bg" style="background-image: url({{ asset('assets/images/autoridades1/vocal.png') }})">
         </div>
         <div class="container">
             <div class="page-header__inner">
@@ -21,7 +21,7 @@
     <section class="news-details">
         <div class="container">
             <div class="row">
-                <div class="col-xl-12 col-lg-12">
+                <div class="col-xl-8 col-lg-8">
                     <div class="news-details__left">
                         <div class="news-details__img-box">
                             <div class="news-details__img">
@@ -32,13 +32,13 @@
                                 
                             </div>
                         </div>
-                        <div class="news-details__content">
+                        <div class="text-justify news-details__content">
                             <ul class="news-details__meta list-unstyled">
                                 <li>
                                     <div class="icon">
                                         <span class="fas fa-user-circle"></span>
                                     </div>
-                                    <div class="text">
+                                    <div class="text-justify">
                                         <p>{{ $noticia->user->name }}</p>
                                     </div>
                                 </li>
@@ -49,7 +49,7 @@
                             </h3>
                             {!! $noticia->detalle !!}
                         </div>
-                        
+                       
                        
                     </div>
                 </div>

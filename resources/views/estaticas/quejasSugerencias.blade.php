@@ -1,4 +1,4 @@
 @extends('layouts.cliente')
 @section('content')
-@include('sections.quejassugerencias')
+@include('sections.quejassugerencias',['autoridad'=>$autoridad])
 @endsection

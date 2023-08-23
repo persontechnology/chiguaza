@@ -16,6 +16,15 @@
                         </li>
                         <li class="department-one__single">
                             <div class="department-one__content">
+                                <h3 class="department-one__title"><a href="{{ route('autoridades') }}">AUTORIDAD
+                                        <br> GAD CHIGUAZA</a></h3>
+                                <div class="department-one__icon">
+                                    <span class="icon-industry"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="department-one__single">
+                            <div class="department-one__content">
                                 <h3 class="department-one__title"><a href="{{ route('tramites') }}">REQUISITOS
                                         <br>& TRAMITES</a></h3>
                                 <div class="department-one__icon">
@@ -52,7 +61,7 @@
                         </li>
                     </ul>
                     <p class="department-one__text">
-                        Obtenga nuestros servicios rápidos del municipio.
+                        Obtenga nuestros servicios rápidos del Gad Parroquial Chiguaza.
                         <a href="">ver todos los servicios</a>
                     </p>
                 </div>

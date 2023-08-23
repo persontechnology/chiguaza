@@ -3,17 +3,29 @@
 <div class="stricky-header stricked-menu main-menu">
     <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
 </div>
-      <!--Page Header Start-->
-        <section class="page-header">
-            <div class="page-header-bg" style="background-image: url({{ asset('assets/images/backgrounds/page-header-bg.jpg') }})">
+      
+
+    <!--Page Header Start-->
+    <section class="page-header">
+        <div class="page-header-bg" style="background-image: url(assets/images/autoridades1/vocal.png)">
+        </div>
+        <div class="container">
+            <div class="page-header__inner">
+                <h1 class="text-white">Noticia</h1>
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="{{route('welcome')}}">Inicio</a></li>
+                    <li><span>/</span></li>
+                    <li>2023-2027</li>
+                </ul>
             </div>
-            <div class="container">
-                <div class="page-header__inner">
-                    <h2>Noticias</h2>
-                </div>
-            </div>
-        </section>
-        <!--Page Header End-->
+        </div>
+    </section>
+
+    <!--Page Header End-->
+
+  
+
+
 
         <!--News Page Start-->
         <section class="news-page">

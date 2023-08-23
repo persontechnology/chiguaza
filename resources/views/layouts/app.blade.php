@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Dashboard Template · Bootstrap v5.0</title>
+    <title>Gad Parroquial Chiguaza</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
 
@@ -52,7 +52,15 @@
   {{-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> --}}
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Salir</a>
+     
+
+      <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <a class="nav-link px-3" href="{{route('logout')}}" onclick="event.preventDefault();
+        this.closest('form').submit();">Salir</a>
+    </form>
+
+
     </div>
   </div>
 </header>

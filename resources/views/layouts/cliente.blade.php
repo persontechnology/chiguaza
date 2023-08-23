@@ -113,7 +113,7 @@
                                         </li>
                                     </ul>
                                     <ul class="list-unstyled main-menu__top-menu">
-                                        <li><a href="about.html">Ingresar</a></li>
+                                        <li><a href="{{route('login')}}">Ingresar</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -137,22 +137,22 @@
         <!--Site Footer Start-->
         <footer class="site-footer">
             <div class="site-footer__img">
-                <img src="assets/images/resources/site-footer-img.jpg" alt="">
+                <img src="{{asset('assets/images/resources/site-footer-img.jpg')}}" alt="">
             </div>
             <div class="container">
                 <div class="site-footer__top">
                     <div class="footer-widget__logo">
-                        <a href="index.html"><img src="assets/images/resources/footer-logo.png" alt=""></a>
+                        <a href="{{ url('/') }}"><img src="{{ Storage::url($empresah->logo) }}" alt=""></a>
                     </div>
                     <div class="footer-widget__subscribe-box">
                         <div class="footer-widget__subscribe-text">
-                            <p>Subscribe to Newsletter</p>
+                            <p>Gad parroquial Chiguaza</p>
                         </div>
                         <form class="footer-widget__email-box mc-form" data-url="#">
                             <div class="footer-widget__email-input-box">
                                 <input type="email" placeholder="Email Address" name="EMAIL">
                             </div>
-                            <button type="submit" class="footer-widget__subscribe-btn thm-btn">Subscribe</button>
+                            <button type="submit" class="footer-widget__subscribe-btn thm-btn">Suscribirse</button>
                         </form>
                         <div class="mc-form__response"></div><!-- /.mc-form__response -->
                     </div>
@@ -162,9 +162,9 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                             <div class="footer-widget__column footer-widget__Contact">
                                 <div class="footer-widget__title-box">
-                                    <h3 class="footer-widget__title">Contact</h3>
+                                    <h3 class="footer-widget__title">Contacto</h3>
                                 </div>
-                                <p class="footer-widget__Contact-text">80 Road Broklyn Street, 600 <br> New York, USA
+                                <p class="footer-widget__Contact-text">Chiguaza-Huamboya <br> Ecuador.
                                 </p>
                                 <ul class="footer-widget__Contact-list list-unstyled">
                                     <li>
@@ -172,7 +172,7 @@
                                             <span class="icon-email"></span>
                                         </div>
                                         <div class="text">
-                                            <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                            <p><a href="mailto:needhelp@company.com">{{ $empresah->email }}</a></p>
                                         </div>
                                     </li>
                                     <li>
@@ -180,7 +180,7 @@
                                             <span class="fas fa-phone-square"></span>
                                         </div>
                                         <div class="text">
-                                            <p><a href="tel:+926668880000">+92 666 888 0000</a></p>
+                                            <p><a href="">{{ $empresah->telefono }}</a></p>
                                         </div>
                                     </li>
                                 </ul>
@@ -192,32 +192,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                            <div class="footer-widget__column footer-widget__link">
-                                <div class="footer-widget__title-box">
-                                    <h3 class="footer-widget__title">Links</h3>
-                                </div>
-                                <ul class="footer-widget__link-list list-unstyled">
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="team.html">Our Team</a></li>
-                                    <li><a href="events.html">Upcoming Events</a></li>
-                                    <li><a href="news.html">Latest News</a></li>
-                                    <li><a href="{{ route('dashboard') }}">Ingresar</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        
                         <div class="col-xl-2 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                            <div class="footer-widget__column footer-widget__departments">
-                                <div class="footer-widget__title-box">
-                                    <h3 class="footer-widget__title">Departments</h3>
+                            <div class="col-xl-2 col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                <div class="footer-widget__column footer-widget__link">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">Links</h3>
+                                    </div>
+                                    <ul class="footer-widget__link-list list-unstyled">
+                                        <li><a href="{{ route('resenahistorica') }}">Parroquia</a></li>
+                                        <li><a href="{{ route('quejasSugerencias') }}">Servicios</a></li>
+                                        <li><a href="{{ route('noticias') }}">Noticias</a></li>
+                                        <li><a href="{{ route('contactos') }}">Contacto</a></li>
+                                        <li><a href="{{ route('dashboard') }}">Ingresar</a></li>
+                                    </ul>
                                 </div>
-                                <ul class="footer-widget__link-list list-unstyled">
-                                    <li><a href="about.html">Health & Safety</a></li>
-                                    <li><a href="about.html">Housing & Land</a></li>
-                                    <li><a href="about.html">Legal & Finance</a></li>
-                                    <li><a href="about.html">Transport & Traffic</a></li>
-                                    <li><a href="about.html">Arts & Culture</a></li>
-                                </ul>
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
@@ -236,7 +225,7 @@
                         <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="500ms">
                             <div class="footer-widget__column footer-widget__gallery">
                                 <div class="footer-widget__title-box">
-                                    <h3 class="footer-widget__title">Gallery</h3>
+                                    <h3 class="footer-widget__title">Turismo</h3>
                                 </div>
                                 <ul class="footer-widget__gallery-list list-unstyled clearfix">
                                     <li>

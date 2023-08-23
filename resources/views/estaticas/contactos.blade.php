@@ -1,16 +1,23 @@
 @extends('layouts.cliente')
 @section('content')
-    <!--Page Header Start-->
-    <section class="page-header">
-        <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+      <!--Page Header Start-->
+      <section class="page-header">
+        <div class="page-header-bg" style="background-image: url({{ asset('assets/images/autoridades1/vocal.png') }})">
         </div>
         <div class="container">
             <div class="page-header__inner">
-                <h2>Contacto</h2>
+                <h1 class="text-white">Contacto</h1>
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="{{route('welcome')}}">Inicio</a></li>
+                    <li><span>/</span></li>
+                    <li>2023-2027</li>
+                </ul>
             </div>
         </div>
     </section>
+
     <!--Page Header End-->
+
 
     <!--Contact Page Start-->
     <section class="contact-page">
@@ -21,7 +28,7 @@
                         <div class="contact-page__left">
                             <div class="contact-page__img-box">
                                 <div class="contact-page__img">
-                                    <img src="{{ asset('assets/images/resources/contact-page-img-1.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/autoridades/autoridades.jpg') }}" alt="">
                                 </div>
                             </div>
                         </div>

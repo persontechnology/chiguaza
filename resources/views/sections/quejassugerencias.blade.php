@@ -1,18 +1,19 @@
  <!--Video One Start-->
  <section class="video-one">
     <div class="video-one__bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-        style="background-image: url({{ asset('assets/images/backgrounds/video-one-bg.jpg') }});"></div>
+        style="background-image: url({{ asset('assets/images/funcionarios/funcionarios.jpg') }});"></div>
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="video-one__inner">
                     <div class="video-one__video-link">
-                        <a href="https://www.youtube.com/watch?v=KdLGD-bZA6A" class="video-popup">
+                        <a href="{{ $autoridad->url_video }}" class="video-popup">
                             <div class="video-one__video-icon">
                                 <span class="fa fa-play"></span>
                                 <i class="ripple"></i>
                             </div>
                         </a>
+                    
                     </div>
                     <h5 class="video-one__video-title">Buzón de Quejas y Sugerencias</h5>
                 </div>
@@ -74,7 +75,7 @@
 
 <!--Counter One Start-->
 <section class="counter-one">
-    <div class="counter-one__bg" style="background-image: url(assets/images/backgrounds/counter-one-bg.jpg);">
+    <div class="counter-one__bg" style="background-image: url(assets/images/portada/parque.jpg);">
     </div>
     <div class="container">
         <div class="counter-one__inner">

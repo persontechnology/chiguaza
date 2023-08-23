@@ -48,9 +48,9 @@
                             <span class="fa fa-star"></span>
                         </div>
                         <span class="section-title__tagline">BIENVENIDO A {{ config('app.name') }}</span>
-                        <h2 class="section-title__title">
+                        <h3 class="section-title__title">
                             {{ $autoridad->frase }}
-                        </h2>
+                        </h3>
                     </div>
                     <div class="about-two__progress">
                         <div class="about-two__progress-single">

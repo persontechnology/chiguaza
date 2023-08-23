@@ -6,14 +6,17 @@
                 <a href="{{ url('/') }}" class="{{ Route::is('welcome')?'current':'' }}">Inicio</a>
             </li>
             <li class="dropdown">
-                <a href="#">Parroquia</a>
+                
+                <a href="#!">Parroquia</a>
                 <ul class="sub-menu">
-                    <li><a href="{{ route('resenahistorica') }}">Reseña Histórica</a></li>
-                    <li><a href="{{ route('misionvision') }}">Misión y Visión</a></li>
+                    <li><a href="{{ route('autoridades') }}"class="{{ Route::is('autoridades')?'current':'' }}">Autoridades</a></li>
+                    <li><a href="{{ route('funcionarios') }}"class="{{ Route::is('funcionarios')?'current':'' }}">Funcionarios</a></li>
+                    <li ><a href="{{ route('resenahistorica') }}" class="{{ Route::is('resenahistorica')?'current':'' }}">Reseña Histórica</a></li>
+                    <li><a href="{{ route('misionvision') }}"class="{{ Route::is('misionvision')?'current':'' }}">Misión y Visión</a></li>
                     
-                    <li><a href="{{ route('autoridades') }}">Autoridades</a></li>
-                    <li><a href="{{ route('organigrama') }}">Organigrama</a></li>
-                    <li><a href="{{ route('turismo') }}">Turismo</a></li>
+                    
+                    <li><a href="{{ route('organigrama') }}"class="{{ Route::is('organigrama')?'current':'' }}">Organigrama</a></li>
+                    <li><a href="{{ route('turismo') }}"class="{{ Route::is('turismo')?'current':'' }}">Turismo</a></li>
                    
                 </ul>
             </li>

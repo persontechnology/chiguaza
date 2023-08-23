@@ -2,7 +2,7 @@
 @section('content')
     <!--Great Place Start-->
     <section class="great-place">
-        <div class="great-place__bg" style="background-image: url({{ asset('assets/images/backgrounds/great-place-bg.png') }});">
+        <div class="great-place__bg" style="background-image: url({{ asset('assets/images/autoridades/presidente.png') }});">
         </div>
         <div class="container">
 
@@ -15,7 +15,7 @@
                         <div class="great-place__content-box">
                             <div class="great-place__img-box">
                                 <div class="great-place__img">
-                                    <img src="{{ asset('assets/images/resources/great-place-img.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/mensaje/mensaje.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="great-place__text-box">

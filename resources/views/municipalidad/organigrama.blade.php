@@ -19,9 +19,9 @@
             <div class="container">
                 <div class="main-slider__content">
                     <p class="main-slider__sub-title">Administración 2023-2027.</p>
-                    <h2 class="main-slider__title">ORGANIGRAMA INSTITUCIONAL</h2>
+                    <h2 class="main-slider__title"class="main-slider__title" style="font-size: 40px;">ORGANIGRAMA INSTITUCIONAL</h2>
                     <div class="main-slider__btn-box">
-                        <a href="about.html" class="main-slider__btn thm-btn">Inicio</a>
+                        <a href="{{ url('/') }}" class="main-slider-two__btn thm-btn{{ Route::is('welcome')?'current':'' }}">Inicio</a>
                     </div>
                 </div>
             </div>    

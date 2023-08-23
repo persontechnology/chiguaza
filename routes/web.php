@@ -29,12 +29,19 @@ use Illuminate\Support\Facades\Session;
 
 Route::get('/', [WelcomeController::class,'index'])->name('welcome');
 
+Route::get('/autoridades', [WelcomeController::class,'autoridades'])->name('autoridades');
+Route::get('/funcionarios', [WelcomeController::class,'funcionarios'])->name('funcionarios');
 Route::get('/resena-historica', [WelcomeController::class,'resenahistorica'])->name('resenahistorica');
 Route::get('/mision-y-vision', [WelcomeController::class,'misionvision'])->name('misionvision');
 Route::get('/himno', [WelcomeController::class,'himno'])->name('himno');
-Route::get('/autoridades', [WelcomeController::class,'autoridades'])->name('autoridades');
 Route::get('/organigrama', [WelcomeController::class,'organigrama'])->name('organigrama');
 Route::get('/turismo', [WelcomeController::class,'turismo'])->name('turismo');
+
+
+Route::get('/detallevocal', [WelcomeController::class,'detallevocal'])->name('detallevocal');
+Route::get('/detallevocal1', [WelcomeController::class,'detallevocal1'])->name('detallevocal1');
+Route::get('/detallevocal2', [WelcomeController::class,'detallevocal2'])->name('detallevocal2');
+Route::get('/detallevocal3', [WelcomeController::class,'detallevocal3'])->name('detallevocal3');
 
 
 Route::get('/descargar-archivo/{id}',[EstaticasController::class,'descargarArchivo'])->name('descargarArchivo');

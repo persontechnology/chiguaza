@@ -43,8 +43,8 @@
                 <br>
                 <i>Tranparente Anchura=94,Altura=44|.png</i>
                 <br>
-                <a href="{{ Storage::url($empresa->logo) }}">
-                    <img src="{{ Storage::url($empresa->logo) }}" width="45px" alt="">
+                <a href="{{ Storage::url($empresa->logo??'') }}">
+                    <img src="{{ Storage::url($empresa->logo??'') }}" width="45px" alt="">
                 </a>
             </div>
             <div class="form-group">

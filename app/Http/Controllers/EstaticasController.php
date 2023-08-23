@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\EnviarListadoQuejasSugerencias;
 use App\Models\Archivo;
+use App\Models\Autoridad;
 use App\Models\Carpeta;
 use App\Models\Empresa;
 use App\Models\Noticia;
@@ -41,7 +42,8 @@ class EstaticasController extends Controller
     }
 
     public function quejasSugerencias(){
-        return view('estaticas.quejasSugerencias');
+        $aut=Autoridad::first();
+        return view('estaticas.quejasSugerencias',['autoridad'=>$aut]);
     }
 
     public function quejasSugerenciasIngresar(Request $request) {
@@ -107,7 +109,7 @@ class EstaticasController extends Controller
     public function contactoEnviar(Request $request) {
         
         $user=new User();
-        $user->email='david.criollo14@gmail.com';
+        $user->email='taishaalex123@gmail.com';
         $user->notify(new EnviarContacto($request));
         Session::flash('success','Gracias por contactar con GAD Chiguaza. Nos comunicaremos con usted a la brevedad posible.');
         return redirect()->route('contactos');

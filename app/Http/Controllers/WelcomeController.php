@@ -33,6 +33,16 @@ class WelcomeController extends Controller
         return view('welcome',$data);
     }
 
+    function autoridades() {
+        
+        $aut=Autoridad::first();
+        return view('municipalidad.autoridades',['autoridad'=>$aut]);
+    }
+    function funcionarios() {
+        
+        $aut=Autoridad::first();
+        return view('municipalidad.funcionarios',['autoridad'=>$aut]);
+    }
     function resenahistorica() {
         
         $aut=Autoridad::first();
@@ -50,11 +60,7 @@ class WelcomeController extends Controller
         $aut=Autoridad::first();
         return view('municipalidad.himno',['autoridad'=>$aut]);
     }
-    function autoridades() {
-        
-        $aut=Autoridad::first();
-        return view('municipalidad.autoridades',['autoridad'=>$aut]);
-    }
+   
 
     function organigrama() {
         
@@ -65,5 +71,29 @@ class WelcomeController extends Controller
         
         $aut=Autoridad::first();
         return view('municipalidad.turismo',['turismo'=>$aut]);
+    }
+
+
+
+    function detallevocal() {
+        
+        $aut=Autoridad::first();
+        return view('detallevocales.detallevocal',['detallevocal'=>$aut]);
+    }
+    function detallevocal1() {
+        
+        $aut=Autoridad::first();
+        return view('detallevocales.detallevocal1',['detallevocal1'=>$aut]);
+    }
+    function detallevocal2() {
+        
+        $aut=Autoridad::first();
+        return view('detallevocales.detallevocal2',['detallevocal2'=>$aut]);
+    }
+
+    function detallevocal3() {
+        
+        $aut=Autoridad::first();
+        return view('detallevocales.detallevocal3',['detallevocal3'=>$aut]);
     }
 }

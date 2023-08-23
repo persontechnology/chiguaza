@@ -47,7 +47,7 @@
                         <ul class="">
                             @foreach ($archivos as $ar)
                             <li>
-                                <a href="{{ Storage::url($ar->url) }}">{{ $ar->nombre }}
+                                <a target="_blank" href="{{ Storage::url($ar->url) }}">{{ $ar->nombre }}
                                     <i class="fas fa-file-pdf"></i>
                                 </a>
                             </li>    
@@ -63,7 +63,7 @@
 <!--Services One End-->
 
 <!--quejas sugerencias-->
-@include('sections.quejassugerencias')
+@include('sections.quejassugerencias',['autoridad'=>$autoridad])
 <!--quejas sugerencias End-->
 
 
