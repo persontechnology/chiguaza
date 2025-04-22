@@ -31,7 +31,7 @@
       }
     </style>
 
-    
+
     <!-- Custom styles for this template -->
     <link href="{{ asset('admin/dashboard.css') }}" rel="stylesheet">
 
@@ -43,7 +43,7 @@
 
   </head>
   <body>
-    
+
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="{{url('/')}}">{{ config('app.name') }}</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
   {{-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> --}}
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-     
+
 
       <form method="POST" action="{{ route('logout') }}">
         @csrf
@@ -77,19 +77,6 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ Route::is('noticias-admin*')?'active':'' }}" href="{{ route('noticias-admin.index') }}">
-              <span data-feather="layers"></span>
-              Noticias
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link {{ Route::is('slider*')?'active':'' }}" href="{{ route('slider.index') }}">
-              <span data-feather="file"></span>
-              Slider
-            </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link {{ Route::is('empresa*')?'active':'' }}" href="{{ route('empresa.index') }}">
               <span data-feather="shopping-cart"></span>
               Empresa
@@ -101,7 +88,18 @@
               Autoridad
             </a>
           </li>
-          
+          <li class="nav-item">
+            <a class="nav-link {{ Route::is('slider*')?'active':'' }}" href="{{ route('slider.index') }}">
+              <span data-feather="file"></span>
+              Slider
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ Route::is('noticias-admin*')?'active':'' }}" href="{{ route('noticias-admin.index') }}">
+              <span data-feather="layers"></span>
+              Noticias
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link {{ Route::is('carpetas*')?'active':'' }}" href="{{ route('carpetas.index') }}">
               <span data-feather="bar-chart-2"></span>
@@ -114,10 +112,14 @@
               Quejas y Sugerencias
             </a>
           </li>
-          
+
+
+
+
+
         </ul>
 
-        
+
       </div>
     </nav>
 
@@ -134,7 +136,7 @@
     <script src="{{ asset('admin/js/bootstrap.bundle.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/fileinput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/locales/es.js"></script>
-    
+
 
 
   </body>

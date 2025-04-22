@@ -1,15 +1,13 @@
 @extends('layouts.cliente')
 
 @section('content')
-
     <!-- Main Sllider Two Start -->
     <section class="main-slider-two">
         <div class="main-slider-two__carousel owl-carousel owl-theme thm-owl__carousel"
             data-owl-options='{"loop": true, "items": 1, "navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"], "margin": 0, "dots": false, "nav": false, "animateOut": "slideOutDown", "animateIn": "fadeIn", "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 7000, "autoplayHoverPause": false}'>
 
             <div class="item main-slider-two__slide-1">
-                <div class="main-slider-two__bg"
-                    style="background-image: url(assets/images/autoridades/autoridades.jpg);">
+                <div class="main-slider-two__bg" style="background-image: url(assets/images/autoridades/autoridades.jpg);">
                 </div><!-- /.slider-one__bg -->
                 <div class="main-slider-two__shadow"
                     style="background-image: url(assets/images/shapes/main-slider-two-shadow.png);"></div>
@@ -29,12 +27,13 @@
                             <img src="assets/images/shapes/main-slider-two-shape-1.png" alt="">
                         </div>
                         <p class="main-slider-two__sub-title">“PRESIDENTE DEL GAD PARROQUIAL CHIGUAZA 2023-2027”</p>
-                        
+
                         <h2 class="main-slider-two__title">Sr.Julian Tii</h2>
-                          
+
                         <div class="main-slider-two__btn-box">
-                          
-                            <a href="{{ url('/') }}" class="main-slider-two__btn thm-btn{{ Route::is('welcome')?'current':'' }}">Inicio</a>
+
+                            <a href="{{ url('/') }}"
+                                class="main-slider-two__btn thm-btn{{ Route::is('welcome') ? 'current' : '' }}">Inicio</a>
                         </div>
                     </div>
                 </div>
@@ -63,20 +62,57 @@
                             </div>
                             <div class="team-one__img-box">
                                 <div class="team-one__img">
-                                    <img src="assets/images/autoridades/vicepresidenta.png" alt="">
+                                    <img src="assets/images/autoridades/alexis.png" alt="">
                                 </div>
                             </div>
                             <div class="team-one__content">
-                                <h3 class="team-one__name"><a href="{{ route('detallevocal') }}" class="{{ Route::is('detallevocal')?'current':'' }}">Tg.Flor Tserembo</a></h3>
+                                <h3 class="team-one__name"><a href="http://127.0.0.1:8000/autoridades"
+                                        class="{{ Route::is('detallevocal') ? 'current' : '' }}">Sr.Alexis Shakai</a></h3>
 
-                               
-                                
-                                <p class="team-one__sub-title">Vicepresidenta</p>
+
+
+                                <p class="team-one__sub-title">Equidad de Género</p>
                                 <div class="team-one__social">
-                                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100070250487028"><i class="fab fa-twitter"></i></a>
-                                    <a target="_blank"href="https://www.facebook.com/profile.php?id=100070250487028"><i class="fab fa-facebook"></i></a>
-                                    <a target="_blank"href="https://www.facebook.com/profile.php?id=100070250487028"><i class="fab fa-pinterest-p"></i></a>
-                                    <a target="_blank"href="https://www.facebook.com/profile.php?id=100070250487028"><i class="fab fa-instagram"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/el.p.marcelo"><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a target="_blank"href="https://www.facebook.com/el.p.marcelo"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a target="_blank"href="https://www.facebook.com/el.p.marcelo"><i
+                                            class="fab fa-pinterest-p"></i></a>
+                                    <a target="_blank"href="https://www.facebook.com/el.p.marcelo"><i
+                                            class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--Team One Single End-->
+                    <!--Team One Single Start-->
+                    <div class="col-xl-4 col-lg-4">
+                        <div class="team-one__single">
+                            <div class="team-one__shape-4">
+                                <img src="" alt="">
+                            </div>
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/autoridades/antonio_ankuash.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="team-one__content">
+                                <h3 class="team-one__name"><a href="{{ route('detallevocal3') }}"
+                                        class="{{ Route::is('detallevocal3') ? 'current' : '' }}">Tlgo.Antonio Ankuash</a>
+                                </h3>
+                                <p class="team-one__sub-title">Deporte y recreación</p>
+                                <div class="team-one__social">
+                                    <a target="_blank" href="https://www.facebook.com/shakaim.ankuash"><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/shakaim.ankuash"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/shakaim.ankuash"><i
+                                            class="fab fa-pinterest-p"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/shakaim.ankuash"><i
+                                            class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -90,17 +126,26 @@
                             </div>
                             <div class="team-one__img-box">
                                 <div class="team-one__img">
-                                    <img src="assets/images/autoridades/marco_mejeant.jpg" alt="">
+                                    <img src="assets/images/autoridades/clementina.png" alt="">
                                 </div>
                             </div>
                             <div class="team-one__content">
-                                <h3 class="team-one__name"><a href="{{ route('detallevocal1') }}" class="{{ Route::is('detallevocal1')?'current':'' }}">Ing.Marco Mejeant</a></h3>
+                                <h3 class="team-one__name"><a href="{{ route('detallevocal1') }}"
+                                        class="{{ Route::is('detallevocal1') ? 'current' : '' }}">Sra.Clementina Ampush</a>
+                                </h3>
                                 <p class="team-one__sub-title">Planificación y obras públicas</p>
                                 <div class="team-one__social">
-                                    <a target="_blank" href="https://www.facebook.com/armando.akintiua"><i class="fab fa-twitter"></i></a>
-                                    <a target="_blank" href="https://www.facebook.com/armando.akintiua"><i class="fab fa-facebook"></i></a>
-                                    <a target="_blank" href="https://www.facebook.com/armando.akintiua"><i class="fab fa-pinterest-p"></i></a>
-                                    <a target="_blank" href="https://www.facebook.com/armando.akintiua"><i class="fab fa-instagram"></i></a>
+                                    <a target="_blank"
+                                        href="https://www.facebook.com/profile.php?id=100075457100590&sk=photos"><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a target="_blank"
+                                        href="https://www.facebook.com/profile.php?id=100075457100590&sk=photos"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a target="_blank"
+                                        href="https://www.facebook.com/profile.php?id=100075457100590&sk=photos"><i
+                                            class="fab fa-pinterest-p"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/armando.akintiua"><i
+                                            class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -118,43 +163,26 @@
                                 </div>
                             </div>
                             <div class="team-one__content">
-                                <h3 class="team-one__name"><a href="{{ route('detallevocal2') }}" class="{{ Route::is('detallevocal2')?'current':'' }}">Lic.Pedro Wambashu</a></h3>
+                                <h3 class="team-one__name"><a href="{{ route('detallevocal2') }}"
+                                        class="{{ Route::is('detallevocal2') ? 'current' : '' }}">Lic.Pedro Wambashu</a>
+                                </h3>
                                 <p class="team-one__sub-title">Producción y turismo</p>
                                 <div class="team-one__social">
-                                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100081614767763"><i class="fab fa-twitter"></i></a>
-                                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100081614767763"><i class="fab fa-facebook"></i></a>
-                                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100081614767763"><i class="fab fa-pinterest-p"></i></a>
-                                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100081614767763"><i class="fab fa-instagram"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100081614767763"><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100081614767763"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100081614767763"><i
+                                            class="fab fa-pinterest-p"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100081614767763"><i
+                                            class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <!--Team One Single End-->
-                    <!--Team One Single Start-->
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="team-one__single">
-                            <div class="team-one__shape-4">
-                                <img src="" alt="">
-                            </div>
-                            <div class="team-one__img-box">
-                                <div class="team-one__img">
-                                    <img src="assets/images/autoridades/antonio_ankuash.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="team-one__content">
-                                <h3 class="team-one__name"><a href="{{ route('detallevocal3') }}" class="{{ Route::is('detallevocal3')?'current':'' }}">Tlgo.Antonio Ankuash</a></h3>
-                                <p class="team-one__sub-title">Deporte y recreación</p>
-                                <div class="team-one__social">
-                                    <a target="_blank" href="https://www.facebook.com/shakaim.ankuash"><i class="fab fa-twitter"></i></a>
-                                    <a target="_blank" href="https://www.facebook.com/shakaim.ankuash"><i class="fab fa-facebook"></i></a>
-                                    <a target="_blank" href="https://www.facebook.com/shakaim.ankuash"><i class="fab fa-pinterest-p"></i></a>
-                                    <a target="_blank" href="https://www.facebook.com/shakaim.ankuash"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team One Single End-->
-                   
+
                 </div>
             </div>
         </div>

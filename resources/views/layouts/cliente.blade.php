@@ -8,7 +8,8 @@
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/favicons/apple-touch-icon.png') }}" />
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicons/favicon-32x32.png') }}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicons/favicon-16x16.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ asset('assets/images/favicons/favicon-16x16.png') }}" />
     <link rel="manifest" href="{{ asset('assets/images/favicons/site.webmanifest') }}" />
     <meta name="description" content="{{ config('app.name') }} " />
 
@@ -65,32 +66,37 @@
 
     <div class="page-wrapper">
         @php
-            $empresah=\App\Models\Empresa::first();
+            $empresah = \App\Models\Empresa::first();
         @endphp
         <header class="main-header">
             <nav class="main-menu">
                 <div class="main-menu__wrapper">
                     <div class="main-menu__wrapper-inner">
                         <div class="main-menu__logo">
-                            <a href="{{ url('/') }}"><img src="{{ Storage::url($empresah->logo) }}" alt=""></a>
+                            <a href="{{ url('/') }}"><img src="{{ Storage::url($empresah->logo) }}"
+                                    alt=""></a>
                         </div>
                         <div class="main-menu__top">
                             <div class="main-menu__top-inner">
                                 <div class="main-menu__top-left">
                                     <div class="main-menu__social">
                                         @if ($empresah->facebook)
-                                        <a href="{{ $empresah->facebook }}" target="_blanck"><i class="fab fa-facebook"></i></a>    
+                                            <a href="{{ $empresah->facebook }}" target="_blanck"><i
+                                                    class="fab fa-facebook"></i></a>
                                         @endif
                                         @if ($empresah->twitter)
-                                            <a href="{{ $empresah->twitter }}" target="_blanck"><i class="fab fa-twitter"></i></a>    
+                                            <a href="{{ $empresah->twitter }}" target="_blanck"><i
+                                                    class="fab fa-twitter"></i></a>
                                         @endif
                                         @if ($empresah->instagram)
-                                            <a href="{{ $empresah->instagram }}" target="_blanck"><i class="fab fa-instagram"></i></a>    
+                                            <a href="{{ $empresah->instagram }}" target="_blanck"><i
+                                                    class="fab fa-instagram"></i></a>
                                         @endif
                                         @if ($empresah->youtube)
-                                            <a href="{{ $empresah->youtube }}" target="_blanck"><i class="fab fa-youtube"></i></a>    
+                                            <a href="{{ $empresah->youtube }}" target="_blanck"><i
+                                                    class="fab fa-youtube"></i></a>
                                         @endif
-                                        
+
                                     </div>
                                 </div>
                                 <div class="main-menu__top-right">
@@ -100,7 +106,8 @@
                                                 <i class="fas fa-envelope"></i>
                                             </div>
                                             <div class="text">
-                                                <p><a href="mailto:needhelp@company.com">{{ $empresah->email }}</a></p>
+                                                <p><a href="mailto:needhelp@company.com">{{ $empresah->email }}</a>
+                                                </p>
                                             </div>
                                         </li>
                                         <li>
@@ -113,7 +120,7 @@
                                         </li>
                                     </ul>
                                     <ul class="list-unstyled main-menu__top-menu">
-                                        <li><a href="{{route('login')}}">Ingresar</a></li>
+                                        <li><a href="{{ route('login') }}">Ingresar</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -137,12 +144,13 @@
         <!--Site Footer Start-->
         <footer class="site-footer">
             <div class="site-footer__img">
-                <img src="{{asset('assets/images/resources/site-footer-img.jpg')}}" alt="">
+                <img src="{{ asset('assets/images/resources/site-footer-img.jpg') }}" alt="">
             </div>
             <div class="container">
                 <div class="site-footer__top">
                     <div class="footer-widget__logo">
-                        <a href="{{ url('/') }}"><img src="{{ Storage::url($empresah->logo) }}" alt=""></a>
+                        <a href="{{ url('/') }}"><img src="{{ Storage::url($empresah->logo) }}"
+                                alt=""></a>
                     </div>
                     <div class="footer-widget__subscribe-box">
                         <div class="footer-widget__subscribe-text">
@@ -192,7 +200,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-xl-2 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                             <div class="col-xl-2 col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                 <div class="footer-widget__column footer-widget__link">
@@ -212,13 +220,12 @@
                         <div class="col-xl-2 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                             <div class="footer-widget__column footer-widget__explore">
                                 <div class="footer-widget__title-box">
-                                    <h3 class="footer-widget__title">Explore</h3>
+                                    <h3 class="footer-widget__title">Visitanos:</h3>
                                 </div>
                                 <ul class="footer-widget__link-list list-unstyled">
-                                    <li><a href="about.html">Administration</a></li>
-                                    <li><a href="about.html">Fire Services</a></li>
-                                    <li><a href="tax-return.html">Business & Taxation</a></li>
-                                    <li><a href="about.html">Circular’s And Go’s</a></li>
+                                    <li><a href="text-justify">El mundo es demaciado bonito como para viajar solo por
+                                            internet.</a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -230,44 +237,44 @@
                                 <ul class="footer-widget__gallery-list list-unstyled clearfix">
                                     <li>
                                         <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/gallery/footer-widget-gallery-img-1.jpg" alt="">
-                                            <a href="assets/images/gallery/footer-widget-gallery-img-1.jpg"
-                                                class="img-popup"><span class="fab fa-instagram"></span></a>
+                                            <img src="assets/images/turismo/laberintos.jpg" alt="">
+                                            <a href="assets/images/turismo/laberintos.jpg" class="img-popup"><span
+                                                    class="fab fa-instagram"></span></a>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/gallery/footer-widget-gallery-img-2.jpg" alt="">
-                                            <a href="assets/images/gallery/footer-widget-gallery-img-2.jpg"
-                                                class="img-popup"><span class="fab fa-instagram"></span></a>
+                                            <img src="assets/images/turismo/cascadaa.jpg" alt="">
+                                            <a href="assets/images/turismo/cascadaa.jpg" class="img-popup"><span
+                                                    class="fab fa-instagram"></span></a>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/gallery/footer-widget-gallery-img-3.jpg" alt="">
-                                            <a href="assets/images/gallery/footer-widget-gallery-img-3.jpg"
-                                                class="img-popup"><span class="fab fa-instagram"></span></a>
+                                            <img src="assets/images/turismo/riochiwias.jpg" alt="">
+                                            <a href="assets/images/turismo/riochiwias.jpg" class="img-popup"><span
+                                                    class="fab fa-instagram"></span></a>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/gallery/footer-widget-gallery-img-4.jpg" alt="">
-                                            <a href="assets/images/gallery/footer-widget-gallery-img-4.jpg"
-                                                class="img-popup"><span class="fab fa-instagram"></span></a>
+                                            <img src="assets/images/turismo/andrentza.jpg" alt="">
+                                            <a href="assets/images/turismo/andrentza.jpg" class="img-popup"><span
+                                                    class="fab fa-instagram"></span></a>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/gallery/footer-widget-gallery-img-5.jpg" alt="">
-                                            <a href="assets/images/gallery/footer-widget-gallery-img-5.jpg"
-                                                class="img-popup"><span class="fab fa-instagram"></span></a>
+                                            <img src="assets/images/turismo/laguna.jpg" alt="">
+                                            <a href="assets/images/turismo/laguna.jpg" class="img-popup"><span
+                                                    class="fab fa-instagram"></span></a>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/gallery/footer-widget-gallery-img-6.jpg" alt="">
-                                            <a href="assets/images/gallery/footer-widget-gallery-img-6.jpg"
-                                                class="img-popup"><span class="fab fa-instagram"></span></a>
+                                            <img src="assets/images/turismo/cavernas.jpg" alt="">
+                                            <a href="assets/images/turismo/cavernas.jpg" class="img-popup"><span
+                                                    class="fab fa-instagram"></span></a>
                                         </div>
                                     </li>
                                 </ul>
@@ -281,7 +288,8 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">Copy© 2023 Taisha Technology. Todos derechos reservados.<a href="https://www.facebook.com/DKFLSGDSFGDSFGDSFGFDS"></a>
+                                <p class="site-footer__bottom-text">Copy© 2024 Xpertech. Todos derechos reservados.<a
+                                        href=""></a>
                                 </p>
                             </div>
                         </div>
@@ -302,8 +310,8 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-1.png" width="94"
-                        alt="" /></a>
+                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-1.png"
+                        width="94" alt="" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>

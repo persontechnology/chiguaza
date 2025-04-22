@@ -43,6 +43,12 @@ Route::get('/detallevocal1', [WelcomeController::class,'detallevocal1'])->name('
 Route::get('/detallevocal2', [WelcomeController::class,'detallevocal2'])->name('detallevocal2');
 Route::get('/detallevocal3', [WelcomeController::class,'detallevocal3'])->name('detallevocal3');
 
+Route::get('/laberintos', [WelcomeController::class,'laberintos'])->name('laberintos');
+Route::get('/cascadachiguaza', [WelcomeController::class,'cascadachiguaza'])->name('cascadachiguaza');
+Route::get('/riochiguaza', [WelcomeController::class,'riochiguaza'])->name('riochiguaza');
+Route::get('/rioandrentza', [WelcomeController::class,'rioandrentza'])->name('rioandrentza');
+Route::get('/lagunamarianita', [WelcomeController::class,'lagunamarianita'])->name('lagunamarianita');
+Route::get('/cavernaanaconda', [WelcomeController::class,'cavernaanaconda'])->name('cavernaanaconda');
 
 Route::get('/descargar-archivo/{id}',[EstaticasController::class,'descargarArchivo'])->name('descargarArchivo');
 Route::get('/tramites',[EstaticasController::class,'tramites'])->name('tramites');
@@ -69,21 +75,21 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    
+
 
     // sliders
     Route::resource('slider', SliderController::class);
     Route::resource('autoridad', AutoridadController::class);
     Route::resource('noticias-admin', NoticiaController::class);
     Route::resource('empresa', EmpresaController::class);
-    
+
     Route::resource('carpetas', CarpetaController::class);
     Route::post('guardarArchivo', [CarpetaController::class,'guardarArchivo'])->name('guardarArchivo');
     Route::get('eliminarArchivo/{id}', [CarpetaController::class,'eliminarArchivo'])->name('eliminarArchivo');
     Route::get('admin-quejas-sugerencias', [QuejasSugerenciasController::class,'index'])->name('admin.quejasSugerencias');
     Route::get('admin-quejas-sugerencias/ver/{id}', [QuejasSugerenciasController::class,'ver'])->name('admin.quejasSugerenciasVer');
 
-    
+
 
 
 });

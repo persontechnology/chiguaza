@@ -14,8 +14,8 @@
             <div class="main-slider__shape-1">
                 <img src="assets/images/shapes/main-slider-shape-1.png" alt="">
             </div>
-           
-           
+
+
             <div class="container">
                 <div class="main-slider__content">
                     <p class="main-slider__sub-title">Administración 2023-2027.</p>
@@ -27,9 +27,9 @@
             </div>
         </div>
 
-      
 
-       
+
+
 
     </div>
 </section>
@@ -37,7 +37,7 @@
  <section class="history-one">
     <div class="history-one__top">
         <div class="container">
-            <div class="section-title text-center">
+            <div class="text-center section-title">
                 <div class="section-title__icon">
                     <span class="fa fa-star"></span>
                 </div>
@@ -97,7 +97,7 @@
                                             <p class="history-one__date">SUELO</p>
                                         </div>
                                     </div><!-- /.swiper-slide -->
-                                   
+
                                 </div><!-- /.swiper-wrapper -->
                             </div><!-- /#testimonials-one__thumb.swiper-container -->
                             <div class="history-one__nav">
@@ -121,7 +121,7 @@
                                                         <h4 class="history-one__content-title">Historia</h4>
                                                         <p class="text-justify">La Parroquia Rural Chiguaza se encuentra dentro de la Región Amazónica, en la Provincia de Morona Santiago, Cantón Huamboya. Tiene una extensión de 47.180,76 hectáreas. Cuenta con una población de 6.077 habitantes.
                                                             <p class="text-justify">La parroquia se encuentra a una altitud entre 2900 msnm y 3800 msnm. Su clima está dentro de los rangos de lluvioso y húmedo; tiene una temperatura que varía entre los 16 ͦC y 24 ͦC.</p>
-                                                        
+
                                                             <p class="text-justify">El nombre de Chiguaza viene de la expresión shuar castellanizada de Chiwias, nominativo del rio y de una gallinácea llamada Chiwias (pava del monte) que hace más de 12 décadas era abundante en este sector.</p>
                                                          </p>
                                                         <ul class="list-unstyled history-one__poins">
@@ -133,7 +133,7 @@
                                                                     <p>Fuente: GAD Chiguaza,PDOT</p>
                                                                 </div>
                                                             </li>
-                                                           
+
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -156,8 +156,8 @@
                                                     <div class="text-justify">
                                                         <h4 class="history-one__content-title">Límites</h4>
                                                         <p class="text-justify">El Gobierno Autónomo Descentralizado de la Parroquia Chiguaza fue creado el 20 de diciembre del 1920, la misma que cuenta con una extensión de  47.180,76 ha. (CONALI; 2018), actualmente su población acorde al censo realizado en el 2020 es de 6.077 habitantes total.</p>
-                                                         <p class="text-justify">Por otra parte la parroquia limita al norte con la Parroquia Huamboya (Cabecera Cantonal) y el Cantón Pablo VI  al sur con las Parroquias Sinaí, Sevilla y Cuchaenza,al este con la Provincia de Pastaza y el Cantón Taisha y al oeste con  .de la provincia de Morona Santiago en las coordenadas 733P+C5F, bañada al sur por el Rio Nayanamaca y Río Palora y al este por el Rio Pastaza; y, al este el Cantón Pablo VI y la Parroquia Sinaí.</p>   
-                                                                                                                  
+                                                         <p class="text-justify">Por otra parte la parroquia limita al norte con la Parroquia Huamboya (Cabecera Cantonal) y el Cantón Pablo VI  al sur con las Parroquias Sinaí, Sevilla y Cuchaenza,al este con la Provincia de Pastaza y el Cantón Taisha y al oeste con  .de la provincia de Morona Santiago en las coordenadas 733P+C5F, bañada al sur por el Rio Nayanamaca y Río Palora y al este por el Rio Pastaza; y, al este el Cantón Pablo VI y la Parroquia Sinaí.</p>
+
                                                          <ul class="list-unstyled history-one__poins">
                                                             <li>
                                                                 <div class="icon">
@@ -167,9 +167,9 @@
                                                                     <p>Fuente: GAD Chiguaza,PDOT</p>
                                                                 </div>
                                                             </li>
-                                                            
+
                                                         </ul>
-                                                           
+
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -191,9 +191,9 @@
                                                 <div class="col-xl-6 col-lg-6">
                                                     <div class="text-justify">
                                                         <h4 class="history-one__content-title">Clima</h4>
-                                                        <p class="text-justify">El clima es el Conjunto de condiciones atmosféricas propias de un lugar, constituido por la cantidad y frecuencia de lluvias, la humedad, la temperatura, los vientos, etc., y cuya acción compleja influye en la existencia de los seres sometidos a ella.</p>
-                                                         <p>En la Parroquia rural de Chiguaza existen dos tipos de climas, Mega térmico Lluviosos y Tropical Mega térmico Húmedo. En la tabla 2.1.7, se puede observar que el clima Mega térmico lluviosos es el que predomina en la zona de estudio con un área de 32.025,8 ha correspondiente al 66,82 % de total del territorio parroquial.</p>   
-                                                                                                                  
+                                                        <p class="text-justifytext-justify">El clima es el Conjunto de condiciones atmosféricas propias de un lugar, constituido por la cantidad y frecuencia de lluvias, la humedad, la temperatura, los vientos, etc., y cuya acción compleja influye en la existencia de los seres sometidos a ella.</p>
+                                                         <p>En la Parroquia rural de Chiguaza existen dos tipos de climas, Mega térmico Lluviosos y Tropical Mega térmico Húmedo. En la tabla 2.1.7, se puede observar que el clima Mega térmico lluviosos es el que predomina en la zona de estudio con un área de 32.025,8 ha correspondiente al 66,82 % de total del territorio parroquial.</p>
+
                                                          <ul class="list-unstyled history-one__poins">
                                                             <li>
                                                                 <div class="icon">
@@ -203,17 +203,17 @@
                                                                     <p>Fuente: GAD Chiguaza,PDOT</p>
                                                                 </div>
                                                             </li>
-                                                            
+
                                                         </ul>
-                                                           
+
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6">
                                                     <div class="history-one__content-right">
                                                         <div class="history-one__content-img">
-                                                            
-                                                            <img src="assets/images/turismo/cascada.jpg" 
+
+                                                            <img src="assets/images/turismo/cascada1.jpg"
                                                             alt="">
                                                         </div>
                                                     </div>
@@ -239,7 +239,7 @@
                                                                     <p>Fuente: GAD Chiguaza,PDOT</p>
                                                                 </div>
                                                             </li>
-                                                           
+
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -255,7 +255,7 @@
                                         </div>
                                     </div><!-- /.swiper-slide -->
 
-                                  
+
 
                                 </div><!-- /.swiper-wrapper -->
                             </div>
